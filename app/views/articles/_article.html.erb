@@ -1,12 +1,14 @@
-<% @articles.each do |article| %>
-  <div class="card">
-    <div class="card-block">
-      <h4 class="card-title"><a href="<%= article_path(article) %>"><%= article.title %></a></h4>
-      <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
+<div class="col-sm-6 col-md-9 col-md-offset-1">
+  <% @articles.each do |article| %>
+    <div class="card">
+      <div class="card-block">
+        <h4 class="card-title"><a href="<%= article_path(article) %>"><%= article.title %></a></h4>
+        <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
+      </div>
+      <div class="card-footer">
+        <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary-outline" %>
+        <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger-outline" %>
+      </div>
     </div>
-    <div class="card-footer">
-      <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary-outline" %>
-      <%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger-outline" %>
-    </div>
-  </div>
-<% end %>
+  <% end %>
+</div>
