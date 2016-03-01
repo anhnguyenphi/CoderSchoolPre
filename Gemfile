@@ -33,7 +33,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'bootstrap', '~> 4.0.0.alpha3'
 gem 'redcarpet'
-gem 'rails_12factor', group: 'production'
 
 group :development, :test do
 
@@ -45,5 +44,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
 
