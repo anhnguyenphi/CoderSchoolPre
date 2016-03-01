@@ -22,12 +22,12 @@
               <p>Do you want delete this article</p>
             </div>
 
-              <div class="modal-footer">
+              <div class="modal-footer" >
                   <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                   <%= link_to 'Destroy', article_path(article),
-                                method: :delete,
-                                class: "btn btn-danger",
-                                style: "color:white"
+                        method: :delete,
+                        class: "btn btn-warning",
+                        style: "color:white"
                   %>
               </div>
 
