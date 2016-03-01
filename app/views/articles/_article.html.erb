@@ -8,9 +8,13 @@
       <div class="card-footer">
         <%= link_to 'Edit', edit_article_path(article), class: "btn btn-primary-outline" %>
 
-        <button type="button" class="btn btn-danger-outline" data-toggle="modal" data-target=".Delete">Delete</button>
+        <button type="button" class="btn btn-danger-outline" data-toggle="modal" 
+                data-target=".Delete<%= article.id %>">
+          Delete
+        </button>
 
-        <div class="modal fade Delete" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal fade Delete<%= article.id %>" tabindex="-1" role="dialog" 
+              aria-labelledby="mySmallModalLabel">
           <div class="modal-dialog modal-sm">
             <div class="modal-content">
               
