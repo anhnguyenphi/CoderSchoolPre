@@ -3,6 +3,7 @@
     <div class="card">
       <div class="card-block">
         <h4 class="card-title"><a href="<%= article_path(article) %>"><%= article.title %></a></h4>
+        <i>View: <%= article.view %> | Created: <%= article.created_at %></i>
         <p class="card-text"><%= @markdown.render(article.body).html_safe %></p>
       </div>
       <div class="card-footer">

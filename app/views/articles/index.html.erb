@@ -1,4 +1,9 @@
 <% content_for :content do %>
+  <% if @flag %>
+  	<div class="alert alert-success" role="alert">
+		<%= @flag %>
+	</div>
+  <% end %>
   <%= render 'article' %>
 <% end %>
 

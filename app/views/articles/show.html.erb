@@ -29,6 +29,7 @@
           </div>
         </div>
 		<hr>
+    <i>View: <%= @article.view %> | Created: <%= @article.created_at %></i>
 		<%= @markdown.render(@article.body).html_safe %>
 	</div>
 <% end %>
