@@ -6,7 +6,7 @@ Submitted by: Nguyen Phi Anh
 
 Time spent: 3 hours spent in total
 
-URL: [heroku link](https://pacific-beyond-48633.herokuapp.com/)
+URL: [heroku link](https://coderschoolpre.herokuapp.com/)
 
 ## User Stories
 
@@ -31,7 +31,9 @@ The following **optional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-![Video Walkthrough](/demo.gif)
+![Video Walkthrough1](/demo.gif)
+
+![Video Walkthrough2](/demo1.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
