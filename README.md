@@ -6,7 +6,7 @@ Submitted by: Nguyen Phi Anh
 
 Time spent: 3 hours spent in total
 
-URL: [link](https://pacific-beyond-48633.herokuapp.com/)
+URL: [heroku link](https://pacific-beyond-48633.herokuapp.com/)
 
 ## User Stories
 
