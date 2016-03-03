@@ -4,13 +4,18 @@ class ArticlesController < ApplicationController
   # GET /articles
   # GET /articles.json
   def index
-    @articles = Article.all
+    @articles = Article.search(params[:search])
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+    if params[:search]
+      @flag = "Found #{@articles.length} results"
+    end
   end
 
   # GET /articles/1
   # GET /articles/1.json
   def show
+    @article.view += 1
+    @article.save
     @markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
   end
 
@@ -27,7 +32,7 @@ class ArticlesController < ApplicationController
   # POST /articles.json
   def create
     @article = Article.new(article_params)
-
+    @article.view = 0
     respond_to do |format|
       if @article.save
         format.html { redirect_to @article, notice: 'Article was successfully created.' }
