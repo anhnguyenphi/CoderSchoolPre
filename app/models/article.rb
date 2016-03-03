@@ -1,9 +1,9 @@
 class Article < ActiveRecord::Base
 	def self.search(search)
 		if search
-			where('title LIKE ?', "%#{search}%")
+			where('title LIKE ?', "%#{search}%").order(created_at: :desc)
 		else
-			all()
+			order(created_at: :desc)
 		end
 	end
 end
